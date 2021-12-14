@@ -1,0 +1,11 @@
+#santa {
+  border-radius: 50%;
+  background-color: white;
+  background-image: "url('/public/santa.png')";
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 250px;
+  left: 40px;
+  margin-bottom: 20px;
+}

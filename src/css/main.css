@@ -1,0 +1,6 @@
+body {
+  background-color: #263238;
+  background-image: "./flappy.png";
+  height: 80vh;
+  font-family: "Noto Sans", sans-serif;
+}
