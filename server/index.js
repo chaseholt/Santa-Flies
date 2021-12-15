@@ -1,18 +1,17 @@
 const express = require("express");
 const app = express();
-const http = require("http");
-const server = http.createServer(app);
-const { Server } = require("socket.io");
-const io = new Server(server);
 
-app.get("/", (req, res) => {
-  res.send("/Users/chaseholt/personal_projects/santa-bird/public/index.html");
+const path = require("path");
+
+app.use(express.static(path.join(__dirname, "src")));
+
+const server = app.listen(3000, () => {
+  console.log("Example app listening on port 3000!");
 });
+
+const socket = require("socket.io");
+const io = socket(server);
 
 io.on("connection", (socket) => {
-  console.log("a user connected");
-});
-
-server.listen(3001, () => {
-  console.log("Example app listening on port 3000!");
+  console.log("made socket connection", socket.id);
 });

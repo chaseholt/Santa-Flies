@@ -52,7 +52,7 @@ export default class PillarContainer extends React.Component {
               // marginBottom: "100px",
               left: this.leftMargin + "px",
               width: "50px",
-              backgroundColor: "white",
+              backgroundColor: "grey",
             }}
             key={v4()}
             id={abovePillarId}
@@ -67,7 +67,7 @@ export default class PillarContainer extends React.Component {
               top: topHeight + 120,
               left: this.leftMargin + "px",
               width: "50px",
-              backgroundColor: "white",
+              backgroundColor: "grey",
             }}
             key={v4()}
             id={belowPillarId}
@@ -106,7 +106,7 @@ export default class PillarContainer extends React.Component {
             // marginBottom: "100px",
             left: this.leftMargin + "px",
             width: "50px",
-            backgroundColor: "white",
+            backgroundColor: "grey",
           }}
           key={i}
           id={abovePillarId}
@@ -122,7 +122,7 @@ export default class PillarContainer extends React.Component {
             top: topHeight + 120,
             left: this.leftMargin + "px",
             width: "50px",
-            backgroundColor: "white",
+            backgroundColor: "red",
           }}
           key={i + 1}
           id={belowPillarId}

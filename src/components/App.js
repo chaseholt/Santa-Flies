@@ -9,7 +9,11 @@ import StartScreen from "./StartScreen";
 function App(props) {
   if (props.isGameStarted) {
     return (
-      <div>
+      <div
+        style={{
+          background: `url(${process.env.PUBLIC_URL}/trees.jpeg)`,
+        }}
+      >
         <SantaContainer
           isGameOver={props.isGameOver}
           handleGameOver={props.handleGameOver}
