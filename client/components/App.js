@@ -11,7 +11,7 @@ function App(props) {
     return (
       <div
         style={{
-          background: `url(${process.env.PUBLIC_URL}/trees.jpeg)`,
+          background: `url(/trees.jpeg)`,
         }}
       >
         <SantaContainer

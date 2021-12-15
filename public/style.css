@@ -1,0 +1,95 @@
+body {
+  background-color: #263238;
+  background-image: "./flappy.png";
+  height: 80vh;
+  font-family: "Noto Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  display: block;
+}
+
+nav a {
+  display: inline-block;
+  margin: 1em;
+}
+
+form div {
+  margin: 1em;
+  display: inline-block;
+}
+
+#gameOver {
+  font-size: 3em;
+  color: #03a9f4;
+  position: relative;
+  font-weight: bold;
+  top: 150px;
+  text-align: center;
+  z-index: 15;
+  width: 30%;
+  height: 170px;
+  margin: 0 auto;
+  background-color: #424242;
+}
+
+#gameOver div {
+  padding-top: 2%;
+}
+
+#gameOver button {
+  background-color: #009688;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 2%;
+}
+
+#santa {
+  border-radius: 50%;
+
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 250px;
+  left: 40px;
+  margin-bottom: 20px;
+}
+
+#santaImage {
+  height: 1.5em;
+  width: 1.5em;
+  position: absolute;
+  transform: scale(2.5);
+}
+
+#score {
+  font-size: 3.5em;
+  color: #f44336;
+  position: relative;
+  font-weight: bold;
+  text-align: center;
+  z-index: 15;
+}
+
+#startScreen {
+  color: #03a9f4;
+  font-size: 2em;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: absolute;
+  text-align: center;
+}
+
+#startScreen div {
+  display: table-cell;
+  vertical-align: middle;
+}

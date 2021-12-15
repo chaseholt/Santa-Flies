@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../css/gameOver.css";
-
 function GameOver(props) {
   return (
     <div id='gameOver'>

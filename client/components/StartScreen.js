@@ -1,6 +1,5 @@
 import React from "react";
 
-import "../css/startScreen.css";
 import socket from "socket.io-client";
 const clientSocket = socket(window.location.origin);
 clientSocket.on("connect", () => {

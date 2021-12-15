@@ -1,17 +1,28 @@
-const express = require("express");
-const app = express();
+const { db } = require("./db");
+const PORT = process.env.PORT || 8080;
+const app = require("./app");
+const seed = require("../script/seed");
 
-const path = require("path");
+const init = async () => {
+  try {
+    if (process.env.SEED === "true") {
+      await seed();
+    } else {
+      await db.sync();
+    }
+    // start listening (and create a 'server' object representing our server)
+    const server = app.listen(PORT, () =>
+      console.log(`Mixing it up on port ${PORT}`)
+    );
+    const socket = require("socket.io");
+    const io = socket(server);
 
-app.use(express.static(path.join(__dirname, "src")));
+    io.on("connection", (socket) => {
+      console.log("made socket connection", socket.id);
+    });
+  } catch (ex) {
+    console.log(ex);
+  }
+};
 
-const server = app.listen(3000, () => {
-  console.log("Example app listening on port 3000!");
-});
-
-const socket = require("socket.io");
-const io = socket(server);
-
-io.on("connection", (socket) => {
-  console.log("made socket connection", socket.id);
-});
+init();

@@ -2,7 +2,6 @@ import React from "react";
 import $ from "jquery";
 
 import Santa from "../components/Santa";
-import "../css/main.css";
 
 var oldPillar;
 
