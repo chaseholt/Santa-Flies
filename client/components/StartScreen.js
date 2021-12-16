@@ -20,11 +20,13 @@ function StartScreen(props) {
         username,
         room,
       });
+      // window.localStorage.setItem("highScore", highScore.data.highScore);
       window.localStorage.setItem("username", response.data.username);
       window.localStorage.setItem("room", response.data.room);
       //console.log("handleSubmit response : ", response);
       setIsLoggedIn(true);
     } catch (err) {
+      alert("Username already taken");
       console.log("handleSubmit error : ", err);
     }
   };

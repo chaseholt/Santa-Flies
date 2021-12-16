@@ -19,14 +19,14 @@ router.get("/", async (req, res, next) => {
 });
 
 //get high schore of room
-router.get("/highscore", async (req, res, next) => {
+router.get("/highscore/:name", async (req, res, next) => {
   try {
-    const room = await Room.findOne({
+    const room = await Room.findAll({
       where: {
-        roomName: req.body.roomName,
+        roomName: req.params.name,
       },
     });
-    res.json(room);
+    res.send(room);
   } catch (err) {
     next(err);
   }
