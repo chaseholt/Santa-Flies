@@ -2,12 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 
 function Score(props) {
-  //const highScore = window.localStorage.getItem("highScore");
-  let highScore = 0;
-  useEffect(async () => {
-    highScore = await axios.get(`/api/rooms/highscore/${room}`);
-    console.log("highScore: ", highScore);
-  }, []);
+  const highScore = window.localStorage.getItem("highScore");
 
   return (
     <div id='score'>

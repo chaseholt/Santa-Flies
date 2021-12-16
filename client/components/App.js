@@ -22,7 +22,7 @@ function App(props) {
         />
         <PillarContainer isGameOver={props.isGameOver} />
         <Score score={props.score} />
-        {props.isGameOver && <GameOver />}
+        {props.isGameOver && <GameOver score={props.score} />}
       </div>
     );
   } else {

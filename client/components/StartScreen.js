@@ -2,9 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function StartScreen(props) {
-
-  
-
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -23,7 +20,7 @@ function StartScreen(props) {
         username,
         room,
       });
-      // window.localStorage.setItem("highScore", highScore.data.highScore);
+      window.localStorage.setItem("highScore", 0);
       window.localStorage.setItem("username", response.data.username);
       window.localStorage.setItem("room", response.data.room);
       //console.log("handleSubmit response : ", response);
