@@ -1,8 +1,10 @@
-body {
+body, .background {
   background-color: #263238;
-  background-image: "./flappy.png";
-  height: 80vh;
+  /* background-image: "./flappy.png"; */
+   height: 58vmax;
   font-family: "Noto Sans", sans-serif;
+  background-size: cover;
+  background-repeat: repeat-y;
 }
 
 a {
@@ -92,4 +94,8 @@ form div {
 #startScreen div {
   display: table-cell;
   vertical-align: middle;
+}
+
+img .pillar {
+  transform: scale(2.5)
 }

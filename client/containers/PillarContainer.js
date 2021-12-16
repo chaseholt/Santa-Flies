@@ -45,30 +45,30 @@ export default class PillarContainer extends React.Component {
         const abovePillarId = "pillar" + v4();
         const belowPillarId = "pillar" + v4();
         oldPillars.push(
-          <div
+          <img
             style={{
               position: "absolute",
               height: topHeight,
               // marginBottom: "100px",
               left: this.leftMargin + "px",
               width: "50px",
-              backgroundColor: "grey",
+
             }}
             key={v4()}
             id={abovePillarId}
             className='pillar'
-            src='/redpipe.png'
+             src='/redpipe.png'
           />
         );
         oldPillars.push(
-          <image
+          <img
             style={{
               position: "absolute",
               height: bottomHeight,
               top: topHeight + 120,
               left: this.leftMargin + "px",
               width: "50px",
-              backgroundColor: "grey",
+
             }}
             key={v4()}
             id={belowPillarId}
@@ -101,36 +101,34 @@ export default class PillarContainer extends React.Component {
       let abovePillarId = "pillar" + i;
       let belowPillarId = "pillar" + (i + 1);
       initPillars.push(
-        <image
+        <img
           style={{
             position: "absolute",
             height: topHeight,
             // marginBottom: "100px",
             left: this.leftMargin + "px",
             width: "50px",
-            backgroundColor: "grey",
           }}
           key={i}
           id={abovePillarId}
           className='pillar'
-          src='/redpipe.png'
+           src='/redpipe.png'
         />
       );
 
       initPillars.push(
-        <image
+        <img
           style={{
             position: "absolute",
             height: bottomHeight,
             top: topHeight + 120,
             left: this.leftMargin + "px",
             width: "50px",
-            backgroundColor: "red",
           }}
           key={i + 1}
           id={belowPillarId}
           className='pillar'
-          src='/redpipe.png'
+           src='/redpipe.png'
         />
       );
       if (i <= 8) this.leftMargin += 250;
@@ -146,6 +144,8 @@ export default class PillarContainer extends React.Component {
   }
 
   render() {
+
+
     // if (this.props.isGameOver) {
     //   this.setState({
     //     pillars: []

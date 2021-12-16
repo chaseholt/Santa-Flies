@@ -10,9 +10,10 @@ function App(props) {
   if (props.isGameStarted) {
     return (
       <div
-        style={{
-          background: `url(/trees.jpeg)`,
-        }}
+        // style={{
+        //   background: `url(/trees.jpeg)`,
+        // }}
+        className='background'
       >
         <SantaContainer
           isGameOver={props.isGameOver}

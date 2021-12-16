@@ -47,10 +47,13 @@ class AppContainer extends React.Component {
     );
   }
 
+
+
   render() {
     let isGameOver = this.state.isGameOver;
     let score = this.state.score;
     let isGameStarted = this.state.isGameStarted;
+    $("div.background").css("background-image", "url(/trees1.jpeg)");
     return (
       <App
         isGameOver={isGameOver}
